@@ -4,10 +4,18 @@ const github = require("@actions/github");
 try {
   // `who-to-greet` input defined in action metadata file
   const nameToGreet = core.getInput("who-to-greet");
-  const data = core.getInput("data");
+  const PATH = core.getInput("PATH");
+  const METHOD = core.getInput("METHOD");
+  const EXP_RES = core.getInput("EXP_RES");
+  const HEADERS = core.getInput("HEADERS");
+  const PAYLOAD = core.getInput("PAYLOAD");
 
   console.log(`Hello ${nameToGreet}!`);
-  console.log(`Data >>  ${data}!`);
+  console.log(`PATH >>  ${PATH}!`);
+  console.log(`METHOD >>  ${METHOD}!`);
+  console.log(`EXP_RES >>  ${EXP_RES}!`);
+  console.log(`HEADERS >>  ${HEADERS}!`);
+  console.log(`PAYLOAD >>  ${PAYLOAD}!`);
 
   const time = new Date().toTimeString();
   core.setOutput("time", time);
