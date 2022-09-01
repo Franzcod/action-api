@@ -1,0 +1,7 @@
+{
+  "PATH":"https://qa-gke.chattigo.com/tigre/bff-portal-bot/bot/\n",
+  "METHOD":"POST\n",
+  "EXP_RES":"\n{\n    \"detail\":\"Unauthorized\"\n}\n```",
+  "HEADERS":"\n{\n    \"Cookie\":\"token=s%3AeyJhbGciOiJIUzUxMiJ9.eyJyb2xlc05hbWVzIjpbIkJPVF9DT05GSUciXSwic3ViIjoiYm90MnFhdGlnQGNoYXR0aWdvLmNvbSIsInJvbGUiOlsiMTkiXSwiaWRDbGllbnQiOjYsImNhbXBhaW5ncyI6WyIxMiJdLCJwcm9maWxlIjoiMTAiLCJpZFVzdWFyaW8iOjYxMTAsInNlc3Npb25JZCI6IjA0NTEzZmJlZDNhZTRkZGE5NTRiNTk2OGZiN2Y2YmFkIiwicGVybWlzc2lvbnNOYW1lIjpbIkJPVF9SUCIsIkJPVF9DTiJdLCJpZFVzZXJBcGkiOjg2NTQsImlkc2VzaW9uIjowLCJlbmFibGUiOnRydWUsIm5hbWUiOiJCT1QgMiBRQSBUaWdyZXMiLCJleHAiOjE2NjEzMjM3NTUsImlhdCI6MTY2MTI4MDU1NX0.7_70baDmBXckYB_pW7sY6rgPjZjDutr8pIkuExa6D5EpeMgUy9yMYsQMeuKhtAyEyTefCRz8N0fC7D0UY-bMOg.%2B8v%2FmmiTC4mwW4b%2Bus0MX4HSx1e6I77vJKfsXt4mN5w\"\n}\n```",
+  "PAYLOAD":" \n{\n    \"name\": \"papas\",\n    \"type\": \"GENERAL\",\n    \"description\": \"\"\n}\n"
+}

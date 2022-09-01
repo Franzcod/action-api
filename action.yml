@@ -1,0 +1,13 @@
+name: "Hello World"
+description: "Analizar json y retornar resultados"
+inputs:
+  json_data: # id of input
+    description: "Leer json y probar api"
+    required: true
+    default: "World"
+outputs:
+  json_response: # id of output
+    description: "Retornar Json de respuesta"
+runs:
+  using: "node16"
+  main: "index.js"
