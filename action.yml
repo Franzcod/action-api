@@ -4,7 +4,7 @@ inputs:
   json_data: # id of input
     description: "Leer json y probar api"
     required: true
-    default: "World"
+    default: "[ Default ]"
 outputs:
   json_response: # id of output
     description: "Retornar Json de respuesta"
