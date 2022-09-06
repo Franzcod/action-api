@@ -13,6 +13,24 @@ function clean_data(data) {
   return resp;
 }
 
+function format_JSON(data) {
+  let dato = JSON.stringify(data);
+  dato = dato.split("");
+  let resp = "";
+
+  dato.forEach((element) => {
+    if (element == "{" || element == ",") {
+      resp += element + "\n" + "\t";
+    } else if (element == "}") {
+      resp += "\n" + element;
+    } else {
+      resp += element;
+    }
+  });
+
+  return resp;
+}
+
 async function getDataApi(path, method, header, payload) {
   try {
     const config = {
@@ -35,4 +53,5 @@ async function getDataApi(path, method, header, payload) {
 module.exports = {
   clean_data,
   getDataApi,
+  format_JSON,
 };

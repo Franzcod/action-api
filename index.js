@@ -10,6 +10,15 @@ async function main() {
     let HEADERS = core.getInput("HEADERS");
     let PAYLOAD = core.getInput("PAYLOAD");
 
+    // let PATH = "```\nhttps://jsonplaceholder.typicode.com/todos/1\n";
+    // let METHOD = "GET\n";
+    // let EXP_RES =
+    //   '\n{\n    "userId": 1,\n    "id": 1,\n    "title": "delectus aut autem",\n    "completed": false\n}\n';
+    // let HEADERS =
+    //   '\n{\n  "Content-type": "application/json; charset=UTF-8"\n}\n```';
+    // let PAYLOAD =
+    //   '\n{\n    "title": "foo",\n    "body": "bar",\n    "userId": 1\n}\n';
+
     PATH = data_managment.clean_data(PATH).toLowerCase();
     METHOD = data_managment.clean_data(METHOD).toLowerCase();
     EXP_RES = JSON.parse(data_managment.clean_data(EXP_RES));
@@ -29,6 +38,7 @@ async function main() {
 
     let status_code = datos.status;
     let api_response = datos.data;
+    api_response = data_managment.format_JSON(api_response);
     comparation = JSON.stringify(datos.data) == JSON.stringify(EXP_RES);
 
     core.setOutput("status_code", status_code);
