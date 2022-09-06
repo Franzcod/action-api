@@ -28,19 +28,24 @@ async function main() {
 
     let datos = await data_managment.getDataApi(PATH, METHOD, HEADERS, PAYLOAD);
 
+    let comparation;
+
     console.log("DATOS       => ", datos.data);
     console.log("EXP_RES     => ", EXP_RES);
     console.log(
       "COMPARATION => ",
       JSON.stringify(datos.data) == JSON.stringify(EXP_RES)
     );
+    comparation = JSON.stringify(datos.data) == JSON.stringify(EXP_RES);
 
-    // core.setOutput("comparation", comparation);
+    core.setOutput("comparation", comparation);
     // Get the JSON webhook payload for the event that triggered the workflow
     // Obtenga payload webhook del el evento que desencadenó el workflow
     // let payload = JSON.stringify(github.context.payload, undefined, 2);
   } catch (error) {
     core.setFailed(error.message);
+    comparation = false;
+    core.setOutput("comparation", comparation);
   }
 }
 
